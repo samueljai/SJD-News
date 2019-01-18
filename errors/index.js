@@ -20,6 +20,8 @@ exports.handle404 = (err, req, res, next) => {
 };
 
 exports.handle422 = (err, req, res, next) => {
+
+  console.log(err)
   const codes = {
     // eslint-disable-next-line quote-props
     '23503': 'does not exist',
