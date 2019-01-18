@@ -1,0 +1,36 @@
+{
+  "/api": {
+    "GET": "returns a list of all the endpoints on the /api",
+    "/topics": {
+      "GET": "returns an array of all topics",
+      "POST": "accepts a new topic and adds to the database",
+      "/:topic/articles": {
+        "GET": "returns an array of article objects for a given topic",
+        "POST": "accepts a new article and adds to the database for that topic"
+      }
+    },
+    "/articles": {
+      "GET": "returns an array of all articles",
+      "/:article_id": {
+        "GET": "returns an article for a given id",
+        "PATCH": "updates the votes for the given article ID accordingly, increase/decrease",
+        "DELETE": "deleces the article for the given article id"
+      },
+      "/comments": {
+        "GET": "returns an array of comments for a given article ID",
+        "POST": "accepts a new comment and adds to the database for the given article ID",
+        "/:comments_id": {
+          "PATCH": "updates the votes for the given comment ID accordingly, increase/decrease",
+          "DELETE": "deletes the comment for the given comment ID"
+        }
+      }
+    },
+    "/users": {
+      "GET": "returns an array of all users",
+      "POST": "creates a new user for the given criteria",
+      "/:username": {
+        "GET": "returns a user for the given username"
+      }
+    }
+  }
+}

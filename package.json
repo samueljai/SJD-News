@@ -1,0 +1,50 @@
+{
+  "name": "be2-nc-knews",
+  "version": "1.0.0",
+  "description": "## Northcoders News API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec",
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./",
+    "pre-commit": "npm t",
+    "create:db": "psql -f ./db/setup.sql",
+    "create:db_test": "psql -f ./db/setup_test.sql",
+    "create:config": "knex init",
+    "posttest": "npm run lint",
+    "migrate:make": "knex migrate:make",
+    "migrate:latest": "knex migrate:latest --env test",
+    "migrate:rollback": "knex migrate:rollback --env test",
+    "create:seed": "knex seed:make seed",
+    "seed:run": "npm run migrate:rollback && npm run migrate:latest && NODE_ENV=test knex seed:run --env test",
+    "database": "npm run seed:run && psql -f ./db/setup_test.sql > output.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/northcoders/BE2-NC-Knews.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/northcoders/BE2-NC-Knews/issues"
+  },
+  "homepage": "https://github.com/northcoders/BE2-NC-Knews#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "express": "^4.16.4",
+    "knex": "^0.15.2",
+    "og": "0.0.2",
+    "pg": "^7.7.1"
+  },
+  "devDependencies": {
+    "supertest": "^3.3.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.1.4"
+  }
+}

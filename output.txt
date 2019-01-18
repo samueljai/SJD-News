@@ -1,0 +1,3 @@
+DROP DATABASE
+CREATE DATABASE
+You are now connected to database "nc_knews_test" as user "samueljdesai".
