@@ -17,7 +17,8 @@
     "migrate:rollback": "knex migrate:rollback --env test",
     "create:seed": "knex seed:make seed",
     "seed:run": "npm run migrate:rollback && npm run migrate:latest && NODE_ENV=test knex seed:run --env test",
-    "database": "npm run seed:run && psql -f ./db/setup_test.sql > output.txt"
+    "database": "npm run seed:run && psql -f ./db/setup_test.sql > output.txt",
+    "start": "node listen.js"
   },
   "repository": {
     "type": "git",
