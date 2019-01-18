@@ -1,3 +1,5 @@
 const app = require('./app');
 
-app.listen(9090, () => { });
+const PORT = process.env.PORT || 9090;
+
+app.listen(PORT, () => { });
