@@ -36,6 +36,7 @@
   "homepage": "https://github.com/northcoders/BE2-NC-Knews#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "eslint-config-airbnb-base": "^13.1.0",
     "express": "^4.16.4",
     "knex": "^0.15.2",
