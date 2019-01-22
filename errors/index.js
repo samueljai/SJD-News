@@ -12,7 +12,7 @@ exports.handle400 = (err, req, res, next) => {
 };
 
 exports.handle404 = (err, req, res, next) => {
-  if ((err.status === 404) || (err.detail.includes('is not present in table'))) {
+  if (err.status === 404) {
     return res.status(404).send({ msg: err.msg });
     // if not, then move to the next error handler in the chain
   }
