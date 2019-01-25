@@ -22,8 +22,11 @@ exports.formatCommentsData = function (articles_table) {
     ...remainingCommentsData
   }) => {
     const newDate = new Date(created_at);
-    // // console.log(`belongs to: ${belongs_to}`)
-    const matchedArticle = articles_table.filter(article => (article.title === belongs_to));
+    const matchedArticle = articles_table.filter(article => {
+      console.log("article ", article, "...belongs to: ", belongs_to)
+      return (article.title === belongs_to)
+    });
+    console.log("matched article: ", matchedArticle)
     return ({
       article_id: matchedArticle[0].article_id,
       created_at: newDate,
