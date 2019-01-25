@@ -133,7 +133,7 @@ module.exports = [
     created_at: 1501087741355,
   },
   {
-    title: 'History of F',
+    title: 'History of Football',
     topic: 'Football',
     created_by: 'tickle122',
     body: 'It may come as a surprise to many, but football has a long and interesting history; sources suggest that the sport was first introduced in England as early as 1170 when an account describes youths going to the fields for a ‘game of ball’. Aspects of the game can even be traced back to as early as the second and third century BC in China. Sources taken from military manuals at the time describe an exercise called Tsu’ Chu, in which opponents used a leather ball filled with feathers and hair. The aim was to get the ball into a small net fixed on to bamboo canes while also defending themselves from attacks. Variations of the game are also documented in Egyptian and Greek society, proving that the sport has a long tradition throughout history.',
