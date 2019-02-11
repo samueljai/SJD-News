@@ -55,16 +55,21 @@ npm run seed:run:test
 npm test
 ```
 
-## Deployment
-
-The api has been deployed on Heroku, and you can find the it at: 
-https://sjd-news.herokuapp.com/api
-
 ## Built With
 - Node - JS runtime
 - Express - Web application framework
 - Knex - SQL query builder
 - PostgreSQL - Relational database
+
+## Deployment
+The api has been deployed on Heroku, and you can find the it at: 
+https://sjd-news.herokuapp.com/api
+
+The Front End Repo can be found at: 
+https://github.com/samueljai/FE2-SJD-News
+
+To view the deployed App:
+https://sjd-news.netlify.com/
 
 ## Authors
 * **Samuel Jai**
